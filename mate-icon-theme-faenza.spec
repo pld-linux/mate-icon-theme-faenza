@@ -1,12 +1,12 @@
 Summary:	Faenza icon theme for MATE Desktop
 Summary(pl.UTF-8):	Motyw ikon Faenza dla środowiska MATE Desktop
 Name:		mate-icon-theme-faenza
-Version:	1.14.0
+Version:	1.16.0
 Release:	1
 License:	GPL v2
 Group:		Themes
-Source0:	http://pub.mate-desktop.org/releases/1.14/%{name}-%{version}.tar.xz
-# Source0-md5:	7bf461b6307c5e925485e6cb79a06034
+Source0:	http://pub.mate-desktop.org/releases/1.16/%{name}-%{version}.tar.xz
+# Source0-md5:	86a93493f48f9acbd13b49c9116cbe31
 URL:		http://www.mate-desktop.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.9
