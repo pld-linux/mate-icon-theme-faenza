@@ -1,18 +1,20 @@
 Summary:	Faenza icon theme for MATE Desktop
 Summary(pl.UTF-8):	Motyw ikon Faenza dla środowiska MATE Desktop
 Name:		mate-icon-theme-faenza
-Version:	1.16.0
+Version:	1.18.0
 Release:	1
 License:	GPL v2
 Group:		Themes
-Source0:	http://pub.mate-desktop.org/releases/1.16/%{name}-%{version}.tar.xz
-# Source0-md5:	86a93493f48f9acbd13b49c9116cbe31
+Source0:	http://pub.mate-desktop.org/releases/1.18/%{name}-%{version}.tar.xz
+# Source0-md5:	78382dd61ffd5600da34fa2b5991f51b
 URL:		http://www.mate-desktop.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires(post,postun):	gtk-update-icon-cache
+Requires:	mate-icon-theme >= 1.18
+Requires:	hicolor-icon-theme
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,6 +29,7 @@ Summary:	Faenza Dark icon theme for MATE Desktop
 Summary(pl.UTF-8):	Motyw ikon Faenza Dark dla środowiska MATE Desktop
 Group:		Themes
 Requires(post,postun):	gtk-update-icon-cache
+Requires:	%{name} = %{version}-%{release}
 
 %description dark
 Faenza Dark icon theme for MATE Desktop
@@ -39,6 +42,7 @@ Summary:	Faenza Gray icon theme for MATE Desktop
 Summary(pl.UTF-8):	Motyw ikon Faenza Gray dla środowiska MATE Desktop
 Group:		Themes
 Requires(post,postun):	gtk-update-icon-cache
+Requires:	%{name}-dark = %{version}-%{release}
 
 %description gray
 Faenza Gray icon theme for MATE Desktop
@@ -124,6 +128,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %dir %{_iconsdir}/matefaenzagray
-%{_iconsdir}/matefaenzagray/actions
 %{_iconsdir}/matefaenzagray/index.theme
 %ghost %{_iconsdir}/matefaenzagray/icon-theme.cache
